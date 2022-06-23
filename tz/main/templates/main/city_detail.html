@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+{% load new_tags %}
+
+{% block title %}{{ city.cityName }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h3>Улицы города {{ city.cityName }}</h3>
+        <div class="cityStreet">
+            {% for street in city.cityStreet|split:"," %}
+            <h4>{{street}}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

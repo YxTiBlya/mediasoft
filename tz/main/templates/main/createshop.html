@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h3>Добавить магазин</h3>
+        <form method="POST" action="addShop/" class="shopForm">
+            {% csrf_token %}
+            <input type="text" required placeholder="Название" name="shopName">
+            <input type="text" required placeholder="Город" name="shopCity">
+            <input type="text" required placeholder="Улица" name="shopStreet">
+            <input type="text" required placeholder="Дом" name="shopHouse">
+            <div class="timeF">
+                <h6>Время открытия</h6>
+                <input type="time" name="shopTO">
+            </div>
+            <div class="timeF">
+                <h6>Время закрытия</h6>
+                <input type="time" name="shopTC">
+            </div>
+            <button class="btn btn-outline-danger" type="submit">Добавить</button>
+        </form>
+    </div>
+{% endblock %}

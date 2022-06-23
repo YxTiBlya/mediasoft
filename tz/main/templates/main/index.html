@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <aside>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'cities' %}" class="btn btn-outline-danger"><li>Города</li></a>
+            <a href="{% url 'createshop' %}" class="btn btn-outline-danger"><li>Добавить магазин</li></a>
+            <a href="{% url 'findshop' %}" class="btn btn-outline-danger"><li>Магазины</li></a>
+        </ul>
+    </aside>
+{% endblock %}

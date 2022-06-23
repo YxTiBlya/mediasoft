@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h3>Города</h3>
+        <div class="cityField">
+            {% for city in cities%}
+                <a href="{% url 'street' city.id %}" class="cityhref"><h3>{{ city }}</h3></a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

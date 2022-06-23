@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <form method="GET" action="{% url 'shop' %}" class="getShops">
+            <input type="text" placeholder="Город" name="city">
+            <input type="text" placeholder="Улица" name="street">
+            <div class="isOpen">
+                <input type="checkbox" id="Открыто" name="open">
+                <label for="Открыто">Открыто</label>
+            </div>
+            {% csrf_token %}
+            <button class="btn btn-outline-danger" type="submit">Искать</button>
+        </form>
+        <h4 class="title">Магазины</h4>
+        <div class="shops">
+            {% if shops %}
+            {% for shop in shops %}
+                <div class="shop">
+                    <div class="shopEl"><h5>Название: {{ shop.shopName }}</h5></div>
+                    <div class="shopEl"><h5>Город: {{ shop.shopCity }}</h5></div>
+                    <div class="shopEl"><h5>Улица: {{ shop.shopStreet }}</h5></div>
+                    <div class="shopEl"><h5>Дом: {{ shop.shopHouse }}</h5></div>
+                    <div class="shopEl"><h5>Откытие в: {{ shop.shopTO }}</h5></div>
+                    <div class="shopEl"><h5>Закрытие в: {{ shop.shopTC }}</h5></div>
+                </div>
+            {% endfor %}
+            {% else %}
+            <h4>Магазинов нет :(</h4>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

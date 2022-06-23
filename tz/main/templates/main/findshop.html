@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <form method="GET" action="{% url 'shop' %}" class="getShops">
+            <input type="text" placeholder="Город" name="city">
+            <input type="text" placeholder="Улица" name="street">
+            <div class="isOpen">
+                <input type="checkbox" id="Открыто" name="open">
+                <label for="Открыто">Открыто</label>
+            </div>
+            {% csrf_token %}
+            <button class="btn btn-outline-danger" type="submit">Искать</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,109 @@
+body, html{
+    text-align: center;
+    background-color: #2c2c2c;
+    color: white;
+    width: 100%;
+}
+
+main{
+    margin-top: 30px;
+}
+.back{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.logo{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.features{
+    margin-top: 50px;
+    border: 1px solid #dc3545;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+}
+.features .title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cityhref{
+    color: #fff;
+    transition: transform .6s ease;
+}
+.cityhref:hover{
+    color: #dc3545;
+    transform: scale(1.15);
+}
+
+.shop{
+    display: inline-block;
+    border: 1px solid #dc3545;
+    border-radius: 10px;
+    max-width: 40%;
+    min-width: 40%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+.shopForm{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+}
+.shopForm input{
+    margin-bottom: 5px;
+}
+.shopForm .btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.getShops{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+}
+.getShops .btn{
+    margin-top: 10px;
+}
+.getShops input{
+    margin-bottom: 5px;
+}
+
+aside .btn{
+    width: 100%;
+    margin-top: 10px;
+}
+aside{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+}
+aside h3{
+    margin-top: 100px;
+    font-size: 30px;
+}
+aside ul{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+aside ul li,a{
+    list-style-position: inside;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover{
+    transform: scale(1.05);
+}
